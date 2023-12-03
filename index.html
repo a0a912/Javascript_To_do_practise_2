@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>To Do Practise App</title>
+</head>
+<body>
+<!--I want to replicate the prof's website from scratch as much as possible -->
+<!-- Step 1: Create the Nav bar-->
+<nav id="nav">
+    <h1>MY TASKS</h1>
+    <div id="task_sorting_buttons">
+        <button type="button" id="all_tasks"> ALL TASKS </button>
+        <button type="button" id="pending"> PENDING </button>
+        <button type="button" id="completed"> COMPLETED </button>
+    </div>
+</nav>
+
+<main>
+    <h1>All Tasks</h1>
+    <h2>2 tasks due, 4 tasks total</h2>
+
+    <button type="button" id="new_task_button"> Create New Task </button>
+
+    <ul id="task_list">
+        <li>
+            <input type="checkbox" checked> <label> First Task </label>
+            <p>Just an example task. The description contains text.</p>
+            <p> Due: 2024-01-01</p>
+            <div class="task_actions">
+                <button type="button" class="edit_task"> Edit </button>
+                <button type="button" class="delete_task"> Delete </button>
+            </div>
+        </li>
+        <li>
+            <input type="checkbox"> <label> Task Overdue </label>
+            <p>JThis task is overdue (due in the past)</p>
+            <p> Due: 2023-11-10</p>
+            <div class="task_actions">
+                <button type="button" class="edit_task"> Edit </button>
+                <button type="button" class="delete_task"> Delete </button>
+            </div>
+        </li>
+        <li>
+            <input type="checkbox" checked> <label> Another task (completed) </label>
+            <p>This task has the property completed: true</p>
+            <p> Due: 2023-10-10</p>
+            <div class="task_actions">
+                <button type="button" class="edit_task"> Edit </button>
+                <button type="button" class="delete_task"> Delete </button>
+            </div>
+        </li>
+
+        <li>
+            <input type="checkbox" checked> <label> Another completed task </label>
+            <p>TThis task is completed but the due date was before the other one</p>
+            <p> Due: 2023-06-01</p>
+            <div class="task_actions">
+                <button type="button" class="edit_task"> Edit </button>
+                <button type="button" class="delete_task"> Delete </button>
+            </div>
+        </li>
+
+
+
+    </ul>
+    <hr>
+
+
+
+
+
+</main>
+<div id="modal_background">
+
+</div>
+
+<div id="modal_box">
+    <div id="modal_contents">
+        <h3>Create New Task</h3>
+
+        <form id="create_new_task">
+            <label for="new_task_title">New Task</label> <br>
+            <input type="text" placeholder="Task Title" id="new_task_title">  <br>
+            <label for="new_task_description">Description</label> <br>
+            <textarea placeholder="Task Description" id="new_task_description"></textarea> <br>
+            <label for="new_task_due_date">Due Date</label> <br>
+            <input type="date" id="new_task_due_date"> <br>
+            <button type="submit" id="save_task">Save Task</button>
+
+        </form>
+        <button type="submit" id="close_modal"> Close Modal</button>
+    </div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
